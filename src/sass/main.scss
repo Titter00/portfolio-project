@@ -85,6 +85,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+  align-items: center;
 }
 .logo {
   img {
@@ -155,7 +156,43 @@ header {
     }
 
     &:nth-child(2) {
-      transform: rotate(45deg) translateY(1rem);
+      transform: rotate(45deg) translateY(0.6rem);
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .burger {
+    display: none;
+  }
+  .menu {
+    position: relative;
+    background: inherit;
+    color: var(--textColor);
+    list-style: none;
+    flex-direction: row;
+    height: inherit;
+    width: max-content;
+    gap: 5rem;
+    font-weight: normal;
+
+    &__link {
+      position: relative;
+      cursor: pointer;
+    }
+    &__link::after {
+      content: "";
+      width: 0;
+      height: 0.2rem;
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      background: var(--main);
+      border-radius: 2rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__link:hover::after {
+      width: 100%;
     }
   }
 }
