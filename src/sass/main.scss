@@ -199,6 +199,91 @@ header {
   }
 }
 
+.projects {
+  &__title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10rem auto 5rem auto;
+    position: relative;
+    width: max-content;
+
+    &-main {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 0.4rem;
+      border-top-left-radius: 1rem;
+      display: inline;
+    }
+
+    &-sub {
+      color: var(--textColor);
+    }
+  }
+
+  &__content {
+    display: grid;
+    margin: 3rem 0 4rem 0;
+
+    &-card {
+      margin: 6rem 1rem;
+      box-shadow: var(--shadow);
+      &--img {
+        width: 20%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+
+    &-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--textColor);
+      padding-right: 3rem;
+      border-bottom: 1px solid var(--textColor);
+    }
+    &-link--img {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin: 0.3rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    text-align: justify;
+    color: var(--textLightColor);
+  }
+}
+
+.technologies {
+  &__title {
+    padding: 0.4rem;
+    border-bottom: 2px solid var(--textColor);
+    width: max-content;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: var(--textColor);
+    padding-right: 3rem;
+  }
+
+  &__icons {
+    display: flex;
+  }
+  &__icons img {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0.8rem;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .burger {
     display: none;
@@ -252,31 +337,51 @@ header {
       width: 100%;
     }
   }
+}
+@media only screen and (min-width: 1000px) {
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 3rem 30rem;
+    gap: 4rem;
+    &__image {
+      width: 40%;
+      order: 2;
+    }
 
-  @media only screen and (min-width: 1000px) {
-    .home {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 90%;
-      margin: 3rem 30rem;
-      gap: 4rem;
-      &__image {
-        width: 40%;
-        order: 2;
+    &__information {
+      font-size: 3rem;
+
+      &--span {
+        font-size: 2.2rem;
       }
+    }
+    &__icons {
+      display: block;
+      margin: 1rem auto;
+    }
+  }
+}
 
-      &__information {
-        font-size: 3rem;
+@media only screen and (min-width: 1000px) {
+  .projects {
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      margin: 0 20rem;
+      // grid-gap: 1rem;
 
-        &--span {
-          font-size: 2.2rem;
-        }
+      &-card {
+        width: 80%;
       }
-      &__icons {
-        display: block;
-        margin: 1rem auto;
+    }
+
+    &__info {
+      &-name {
+        font-size: 1.4rem;
       }
     }
   }
