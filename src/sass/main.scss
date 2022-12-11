@@ -114,13 +114,16 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 2rem;
-  position: sticky;
+  // position: sticky;
   top: 0;
   background: var(--White);
   z-index: 100;
   transition: all 0.4s ease-in-out;
 }
-
+.sticky {
+  position: sticky;
+  background-color: rgba(255, 255, 255, 0.95);
+}
 header.active {
   box-shadow: var(--shadow);
 }
@@ -256,6 +259,7 @@ header.active {
 
 .home {
   margin-top: 4rem;
+  border-bottom: 1px solid black;
 }
 
 .home-image {
