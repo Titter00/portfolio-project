@@ -1,16 +1,20 @@
-// "use strict";
+"use strict";
 
-// const header = document.querySelector("header");
+const allSections = document.querySelectorAll(".section");
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
 
-// console.log(header);
-// const stickyHeader = () => {
-//   const scroll = window.scrollY;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
 
-//   if (scroll > 0) {
-//     header.classList.add("active");
-//   } else {
-//     header.classList.remove("active");
-//   }
-// };
-
-// window.addEventListener("scroll", stickyHeader);
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});

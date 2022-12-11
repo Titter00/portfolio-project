@@ -69,8 +69,14 @@ body {
 }
 
 /* SECTION TITLE */
-
-.section-title {
+.section {
+  transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+.section__title {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -79,7 +85,7 @@ body {
   width: max-content;
 }
 
-.section-title-main {
+.section__title-main {
   background: var(--secondary);
   color: var(--White);
   padding: 0.4rem;
@@ -87,11 +93,11 @@ body {
   display: inline;
 }
 
-.section-title-sub {
+.section__title-sub {
   color: var(--textColor);
 }
 
-.section-title-main::after {
+.section__title-main::after {
   content: "";
   height: 1.2rem;
   width: 1.2rem;
@@ -482,7 +488,7 @@ header.active {
   text-align: justify;
 }
 
-.about .section-title {
+.about .section__title {
   margin: 2rem auto;
 }
 
@@ -606,24 +612,24 @@ header.active {
   display: none;
 }
 
-.contact-form {
+.contact__form {
   margin: 3rem auto;
   width: 80%;
 }
 
-.contact-form-field {
+.contact__form-field {
   margin: 1rem;
 }
 
-.contact-form label {
+.contact__form label {
   display: block;
   font-size: 1rem;
   margin-bottom: 0.2rem;
   color: var(--textColor);
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact__form input,
+.contact__form textarea {
   width: 100%;
   font-size: 1rem;
   padding: 0.5rem 0.2rem;
@@ -631,7 +637,7 @@ header.active {
   border: 1px solid var(--textLightColor);
 }
 
-.contact-form-btn {
+.contact__form-btn {
   background: var(--main);
   border: none;
   color: var(--White);
@@ -645,12 +651,12 @@ header.active {
   transition: all 0.3s ease-in-out;
 }
 
-.contact-form-btn:hover {
+.contact__form-btn:hover {
   background: var(--mainHover);
 }
 
 @media only screen and (min-width: 900px) {
-  .contact-form {
+  .contact__form {
     width: 65%;
   }
 }
@@ -663,7 +669,7 @@ header.active {
   .contact {
     display: flex;
   }
-  .contact-form {
+  .contact__form {
     padding: 2rem;
   }
 }
