@@ -1,4 +1,30 @@
 "use strict";
+//burger menu
+const menu = document.querySelector(".menu");
+const burgerBtn = document.querySelector(".burger");
+
+burgerBtn.addEventListener("click", () => {
+  burgerBtn.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
+//follow section
+
+const menuLinks = document.querySelectorAll(".menu__link");
+
+menuLinks.forEach((link) =>
+  link.addEventListener("click", (e) => {
+    const key = e.target.dataset.key;
+
+    const section =
+      document.querySelector(`.${key}`).getBoundingClientRect().top + window.pageYOffset - 220;
+
+    menu.classList.remove("active");
+    burgerBtn.classList.remove("active");
+
+    window.scrollTo({ top: section, behavior: "smooth" });
+  })
+);
 //sticky navigation
 
 const header = document.querySelector(".header");
