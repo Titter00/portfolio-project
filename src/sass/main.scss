@@ -72,10 +72,7 @@ body {
 .section {
   transition: transform 1s, opacity 1s;
 }
-.section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
+
 .section__title {
   font-size: 2rem;
   font-weight: bold;
