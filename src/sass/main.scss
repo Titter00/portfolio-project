@@ -67,7 +67,10 @@ body {
 
   /* Box shadow hovers */
 }
-
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /* SECTION TITLE */
 .section {
   transition: transform 1s, opacity 1s;
@@ -106,21 +109,19 @@ body {
 }
 
 /* HEADER */
-
-header {
+.header.sticky {
+  position: sticky;
+}
+.header {
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 2rem;
-  // position: sticky;
   top: 0;
   background: var(--White);
   z-index: 100;
   transition: all 0.4s ease-in-out;
 }
-.sticky {
-  position: sticky;
-  background-color: rgba(255, 255, 255, 0.95);
-}
+
 header.active {
   box-shadow: var(--shadow);
 }

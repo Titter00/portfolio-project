@@ -29,16 +29,18 @@ menuLinks.forEach((link) =>
 
 const header = document.querySelector(".header");
 
+const menuHeight = menu.getBoundingClientRect().height;
+console.log(menuHeight);
 const stickyNav = (entries) => {
   const [entry] = entries;
   console.log(entry);
   if (!entry.isIntersecting) header.classList.add("sticky");
-  else header.classList.remove("sticky");
 };
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
+  rootMargin: `-${menuHeight}px`,
 });
 headerObserver.observe(header);
 
