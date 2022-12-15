@@ -260,13 +260,13 @@ header.active {
   border-bottom: 1px solid black;
 }
 
-.home-image {
+.home__image {
   width: 75%;
   margin: 0 auto;
   display: block;
 }
 
-.home-content {
+.home__content {
   font-size: 2.3rem;
   text-align: center;
   color: var(--textColor);
@@ -276,12 +276,12 @@ header.active {
   align-items: center;
 }
 
-.home-content span {
+.home__content span {
   font-size: 1.8rem;
   display: block;
 }
 
-.home-icons {
+.home__icons {
   background: var(--main);
   width: max-content;
   margin: 1rem auto;
@@ -291,7 +291,7 @@ header.active {
   gap: 1rem;
 }
 
-.scroll-down-button {
+.scroll__down-button {
   width: 1.5rem;
   height: 5rem;
   margin: 2rem auto;
@@ -304,7 +304,7 @@ header.active {
   justify-content: center;
 }
 
-.scroll-down-circle {
+.scroll__down-circle {
   height: 1rem;
   width: 1rem;
   background: var(--main);
@@ -323,11 +323,11 @@ header.active {
 }
 
 @media only screen and (min-width: 1000px) {
-  .home-image {
+  .home__image {
     width: 50%;
   }
 
-  .scroll-down-button {
+  .scroll__down-button {
     display: none;
   }
 }
@@ -341,32 +341,32 @@ header.active {
     margin: 8rem auto;
   }
 
-  .home-image {
+  .home__image {
     order: 2;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  .home-content h1 {
+  .home__content h1 {
     font-size: 3.5rem;
   }
 
-  .home-content span {
+  .home__content span {
     font-size: 2.2rem;
   }
 
-  .home-image {
+  .home__image {
     width: 55%;
     padding: 2rem;
   }
 
-  .home-content h1 {
+  .home__content h1 {
     width: max-content;
   }
 }
 
 @media only screen and (min-width: 1650px) {
-  .home-image {
+  .home__image {
     width: 45%;
   }
 
@@ -374,48 +374,48 @@ header.active {
     margin: 4rem auto;
   }
 
-  .home-content {
+  .home__content {
     padding-left: 3rem;
   }
 
-  .home-content h1 {
+  .home__content h1 {
     font-size: 3.9rem;
   }
 
-  .home-content span {
+  .home__content span {
     font-size: 2.5rem;
   }
 }
 
 /*  PROJECTS  */
 
-.projects-content {
+.projects__content {
   display: grid;
   margin: 3rem 0rem 4rem 0;
   align-items: center;
 }
 
-.project-content-card {
+.project__content-card {
   margin: 5rem auto;
   width: 85%;
   box-shadow: var(--shadow);
   padding: 1rem;
 }
 
-.project-content-card img {
+.project__content-card img {
   width: 70%;
   display: block;
   margin: 0 auto;
 }
 
-.project-info {
+.project__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 0.5rem;
 }
 
-.project-name {
+.project__name {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--textColor);
@@ -423,20 +423,20 @@ header.active {
   border-bottom: 2px solid var(--textColor);
 }
 
-.project-link img {
+.project__link img {
   width: 1.6rem;
   height: 1.6rem;
   margin: 0.3rem;
 }
 
-.project-description {
+.project__description {
   font-size: 1.2rem;
   padding: 0.4rem;
   text-align: justify;
   color: var(--textLightColor);
 }
 
-.technologies-title {
+.technologies__title {
   padding: 0.4rem;
   border-bottom: 2px solid var(--textColor);
   width: max-content;
@@ -447,25 +447,25 @@ header.active {
   padding-right: 5rem;
 }
 
-.technologies-icons {
+.technologies__icons {
   display: flex;
 }
 
-.technologies-icons img {
+.technologies__icons img {
   height: 2.2rem;
   width: 2.2rem;
   margin: 0.8rem;
 }
 
 @media only screen and (min-width: 1000px) {
-  .projects-content {
+  .projects__content {
     grid-template-columns: 1fr 1fr;
   }
 
-  .project-name {
+  .project__name {
     font-size: 1.4rem;
   }
-  .technologies-title {
+  .technologies__title {
     font-size: 1rem;
   }
 }
@@ -475,7 +475,7 @@ header.active {
     width: 90%;
     margin: 0 auto;
   }
-  .project-content-card {
+  .project__content-card {
     width: 75%;
   }
 }
@@ -566,7 +566,7 @@ header.active {
 
 /* TECHNOLOGIES */
 
-.technologies-content {
+.technologies__content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,35 +575,35 @@ header.active {
   flex-wrap: wrap;
 }
 
-.technologies-item {
+.technologies__item {
   padding: 2rem;
   box-shadow: var(--shadow);
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
 }
 
-.technologies-item:hover {
+.technologies__item:hover {
   box-shadow: var(--shadowHover);
 }
 
-.technologies-item img {
+.technologies__item img {
   width: 6rem;
   height: 6rem;
 }
 
-.technologies-item-title {
+.technologies__item-title {
   text-align: center;
   margin-top: 1rem;
   font-size: 1rem;
   color: var(--textLightColor);
 }
 
-.technologies-container .section-title {
+.technologies__container .section__title {
   margin: 5rem auto 2rem auto;
 }
 
 @media only screen and (min-width: 1500px) {
-  .technologies-item {
+  .technologies__item {
     margin: 2rem;
   }
 }
